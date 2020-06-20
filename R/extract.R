@@ -28,7 +28,7 @@
 
 setMethod("extract", signature(x="SpatRaster", y="SpatVector"), 
 function(x, y, fun=NULL, ..., touches=is.lines(y), method="simple", list=FALSE) { 
-
+        browser()
 	r <- x@ptr$extractVector(y@ptr, touches[1], method[1])
 	x <- show_messages(x, "extract")
 	#f <- function(i) if(length(i)==0) { NA } else { i }
